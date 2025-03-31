@@ -1,0 +1,144 @@
+:root {
+    --bg-color: #181a1d;
+    --color-primary: #344966;
+    --color-secondary: #B4CDED;
+    --color-secondaryH: #98adca;
+    --color-tertiary: #F0F4EF;
+    --color-tertiaryH: #c6c9c5;
+    --color-quaternary: #6c757d;
+    --color-quianry: #4e555b;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #FFF;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-tertiary);
+}
+
+.calculator {
+    width: 450px;
+    height: 650px;
+    margin: 20px;
+    padding: 16px;
+    border-radius: 18px;
+    background-color: var(--bg-color);
+}
+
+.display-area {
+    width: 100%;
+    min-height: calc(20%);
+    display: flex;
+    align-items: center;
+}
+
+.display-content {
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: right;
+}
+
+.buttons-area {
+    width: 100%;
+    height: calc(80%);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+    font-weight: 600;
+}
+
+.button {
+    background-color: var(--color-quianry);
+    border: none;
+    border-radius: 20%;
+    cursor: pointer;
+    transition: .7s;
+}
+
+.button:hover {
+    background-color: var(--color-quaternary);
+}
+
+.buttons-area .operator {
+    background-color: var(--color-secondary);
+    color: var(--color-quianry);
+}
+
+.buttons-area .operator:hover {
+    background-color: var(--color-secondaryH);
+}
+
+.buttons-area .operator-secondary {
+    background-color: var(--color-tertiary);
+    color: var(--color-quianry);
+}
+
+.buttons-area .operator-secondary:hover {
+    background-color: var(--color-tertiaryH);
+}
+
+.operator .fa-solid {
+    color: var(--color-quianry);
+}
+
+.operator {
+    grid-column: 4;
+}
+
+.operator-secondary {
+    grid-row: 1;
+}
+
+#seven, #eight, #nine {
+    grid-row: 2;
+}
+
+#four, #five, #six {
+    grid-row: 3;
+}
+
+#one, #two, #three {
+    grid-row: 4;
+}
+
+#delete {
+    grid-area: 5 / 1;
+}
+
+#zero {
+    grid-area: 5 / 2;
+}
+
+#decimal {
+    grid-area: 5 / 3;
+}
+
+footer span,
+footer a {
+    font-size: .875rem;
+    font-weight: 300;
+}
+
+footer span {
+    color: var(--color-quianry);
+}
+
+footer a {
+    color: var(--color-primary);
+    font-weight: 400;
+}
